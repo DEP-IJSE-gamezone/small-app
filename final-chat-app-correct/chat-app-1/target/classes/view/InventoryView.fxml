@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane prefHeight="587.0" prefWidth="731.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep12.client1.controller.InventoryViewController">
+   <children>
+      <VBox layoutX="53.0" layoutY="87.0" spacing="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <Label text="BARCODE" />
+            <TextField fx:id="txtBarcode" />
+            <Label text="DESCRIPTION" />
+            <TextField fx:id="txtDescription" />
+            <Label text="QUANTITY" />
+            <TextField fx:id="txtQuantity" />
+            <Label text="PRICE" />
+            <TextField fx:id="txtPrice" />
+         </children>
+      </VBox>
+      <Button fx:id="btnSave" defaultButton="true" layoutX="245.0" layoutY="301.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="24.0" prefWidth="95.0" text="SAVE" />
+      <Button fx:id="btnDelete" layoutX="392.0" layoutY="301.0" mnemonicParsing="false" onAction="#btnDeleteOnaction" prefHeight="24.0" prefWidth="95.0" text="DELETE" />
+      <TableView fx:id="tblDisplay" layoutX="14.0" layoutY="348.0" onKeyPressed="#tblOnKeyPressed" prefHeight="220.0" prefWidth="702.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="BARCODE" />
+          <TableColumn prefWidth="300.79996490478516" text="DESCRIPTION" />
+            <TableColumn prefWidth="188.80001831054688" text="QUANTITY" />
+            <TableColumn prefWidth="137.5999755859375" text="PRICE" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNewItem" layoutX="600.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnNewItemOnAction" prefHeight="24.0" prefWidth="110.0" text="NEW ITEM" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+   </children>
+</AnchorPane>
